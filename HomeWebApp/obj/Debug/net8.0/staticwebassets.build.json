@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "lZlWfzati8CI2PmSDkcfaLinx94Y1ne6F9GDKFtdLIo=",
+  "Hash": "GzBito85IK89GQ1VDIcN/OQKkPGs9QVOTYKrcki2OLA=",
   "Source": "HomeWebApp",
   "BasePath": "/",
   "Mode": "Root",
@@ -16,6 +16,25 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.8\\staticwebassets\\AuthenticationService.js",
+      "SourceId": "Microsoft.AspNetCore.Components.WebAssembly.Authentication",
+      "SourceType": "Package",
+      "ContentRoot": "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.8\\staticwebassets\\",
+      "BasePath": "_content/Microsoft.AspNetCore.Components.WebAssembly.Authentication",
+      "RelativePath": "AuthenticationService.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\microsoft.aspnetcore.components.webassembly.authentication\\8.0.8\\staticwebassets\\AuthenticationService.js"
+    },
     {
       "Identity": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.boot.json",
       "SourceId": "HomeWebApp",
@@ -169,6 +188,25 @@
       "OriginalItemSpec": "C:\\Users\\User\\.nuget\\packages\\microsoft.netcore.app.runtime.mono.browser-wasm\\8.0.4\\runtimes\\browser-wasm\\native\\dotnet.runtime.js.map"
     },
     {
+      "Identity": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\FluentAssertions.wasm",
+      "SourceId": "HomeWebApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/FluentAssertions.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\obj\\Debug\\net8.0\\webcil\\FluentAssertions.wasm"
+    },
+    {
       "Identity": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\HomeWebApp.pdb",
       "SourceId": "HomeWebApp",
       "SourceType": "Computed",
@@ -283,6 +321,25 @@
       "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\obj\\Debug\\net8.0\\webcil\\Microsoft.AspNetCore.Authorization.wasm"
     },
     {
+      "Identity": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.wasm",
+      "SourceId": "HomeWebApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Authorization.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\obj\\Debug\\net8.0\\webcil\\Microsoft.AspNetCore.Components.Authorization.wasm"
+    },
+    {
       "Identity": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Forms.wasm",
       "SourceId": "HomeWebApp",
       "SourceType": "Computed",
@@ -338,6 +395,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\obj\\Debug\\net8.0\\webcil\\Microsoft.AspNetCore.Components.Web.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.Authentication.wasm",
+      "SourceId": "HomeWebApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.WebAssembly.Authentication.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\obj\\Debug\\net8.0\\webcil\\Microsoft.AspNetCore.Components.WebAssembly.Authentication.wasm"
     },
     {
       "Identity": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.wasm",
@@ -1060,6 +1136,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\obj\\Debug\\net8.0\\webcil\\System.ComponentModel.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Configuration.ConfigurationManager.wasm",
+      "SourceId": "HomeWebApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.Configuration.ConfigurationManager.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\obj\\Debug\\net8.0\\webcil\\System.Configuration.ConfigurationManager.wasm"
     },
     {
       "Identity": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Configuration.wasm",
@@ -3114,6 +3209,25 @@
       "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\obj\\Debug\\net8.0\\webcil\\System.Security.Cryptography.Primitives.wasm"
     },
     {
+      "Identity": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Cryptography.ProtectedData.wasm",
+      "SourceId": "HomeWebApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.Security.Cryptography.ProtectedData.wasm",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "WasmResource",
+      "AssetTraitValue": "runtime",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\obj\\Debug\\net8.0\\webcil\\System.Security.Cryptography.ProtectedData.wasm"
+    },
+    {
       "Identity": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Cryptography.wasm",
       "SourceId": "HomeWebApp",
       "SourceType": "Computed",
@@ -4214,6 +4328,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.ServiceModel.Web.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\obj\\Debug\\net8.0\\compressed\\21354jzo8g.gz",
+      "SourceId": "HomeWebApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/FluentAssertions.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\FluentAssertions.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\FluentAssertions.wasm"
     },
     {
       "Identity": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\obj\\Debug\\net8.0\\compressed\\23zt4e1553.gz",
@@ -5565,6 +5698,25 @@
       "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.VisualBasic.wasm"
     },
     {
+      "Identity": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\obj\\Debug\\net8.0\\compressed\\gpe8iolksh.gz",
+      "SourceId": "HomeWebApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.Security.Cryptography.ProtectedData.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Cryptography.ProtectedData.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.Cryptography.ProtectedData.wasm"
+    },
+    {
       "Identity": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\obj\\Debug\\net8.0\\compressed\\hcsfvd80qw.gz",
       "SourceId": "HomeWebApp",
       "SourceType": "Computed",
@@ -5677,6 +5829,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Security.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\obj\\Debug\\net8.0\\compressed\\i435vz770o.gz",
+      "SourceId": "HomeWebApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.WebAssembly.Authentication.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.Authentication.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.WebAssembly.Authentication.wasm"
     },
     {
       "Identity": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\obj\\Debug\\net8.0\\compressed\\idw9ib6a2e.gz",
@@ -6876,6 +7047,25 @@
       "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Numerics.Vectors.wasm"
     },
     {
+      "Identity": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\obj\\Debug\\net8.0\\compressed\\rxruenlzfg.gz",
+      "SourceId": "HomeWebApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/Microsoft.AspNetCore.Components.Authorization.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\Microsoft.AspNetCore.Components.Authorization.wasm"
+    },
+    {
       "Identity": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\obj\\Debug\\net8.0\\compressed\\rz5zkux6yd.gz",
       "SourceId": "HomeWebApp",
       "SourceType": "Computed",
@@ -6988,6 +7178,25 @@
       "CopyToOutputDirectory": "PreserveNewest",
       "CopyToPublishDirectory": "Never",
       "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Diagnostics.FileVersionInfo.wasm"
+    },
+    {
+      "Identity": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\obj\\Debug\\net8.0\\compressed\\sxg65v1wz3.gz",
+      "SourceId": "HomeWebApp",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "_framework/System.Configuration.ConfigurationManager.wasm.gz",
+      "AssetKind": "Build",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Configuration.ConfigurationManager.wasm",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "CopyToOutputDirectory": "PreserveNewest",
+      "CopyToPublishDirectory": "Never",
+      "OriginalItemSpec": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\System.Configuration.ConfigurationManager.wasm"
     },
     {
       "Identity": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\obj\\Debug\\net8.0\\compressed\\try2jnv8y4.gz",

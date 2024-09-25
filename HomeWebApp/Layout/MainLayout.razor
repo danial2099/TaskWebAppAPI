@@ -1,9 +1,12 @@
 ﻿@inherits LayoutComponentBase
+@inject NavigationManager Navigation
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
-
+    @if (!IsLoginPage)
+    {
+        <div class="sidebar">
+            <NavMenu />
+        </div>
+    }
     <main>
         <div class="top-row px-4">
             <!--To be log in link/profile link-->
@@ -15,3 +18,6 @@
         </article>
     </main>
 </div>
+@code {
+    private bool IsLoginPage => Navigation.Uri.Contains("/login");
+}   

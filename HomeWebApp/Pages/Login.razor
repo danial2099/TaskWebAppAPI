@@ -1,0 +1,59 @@
+﻿@page "/login"
+@using HomeWebApp.Models
+@using System.Text.Json
+@using System.Net.Http.Json
+@inject HttpClient Http
+@inject NavigationManager Navigation
+
+<PageTitle>Login</PageTitle>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">Login</h5>
+                    <EditForm Model="loginModel" OnValidSubmit="HandleLogin">
+                        <DataAnnotationsValidator />
+                        <ValidationSummary />
+
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <InputText id="username" class="form-control" @bind-Value="loginModel.Username" />
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="password">Password</label>
+                            <InputText id="password" type="password" class="form-control" @bind-Value="loginModel.Password" />
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+                    </EditForm>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@code {
+    private LoginModel loginModel = new LoginModel();
+
+    private async Task HandleLogin()
+    {
+        if (loginModel.Username == "admin" && loginModel.Password == "admin")
+        {
+            // Store a flag in local storage or a similar mechanism to indicate the user is logged in
+            await Http.PostAsJsonAsync("api/auth/login", loginModel);
+            Navigation.NavigateTo("/Tasks");
+        }
+        else
+        {
+            // Handle login failure
+            Console.WriteLine("Invalid credentials");
+        }
+    }
+
+    public class LoginModel
+    {
+        public string Username { get; set; } //username : admin
+        public string Password { get; set; } //password : admin
+    }
+}
