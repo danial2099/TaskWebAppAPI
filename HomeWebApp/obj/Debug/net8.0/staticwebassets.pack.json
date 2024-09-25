@@ -1,0 +1,61 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\bin\\Debug\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\obj\\Debug\\net8.0\\compressed\\8kkj4xhrwy.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\obj\\Debug\\net8.0\\scopedcss\\bundle\\HomeWebApp.styles.css",
+      "PackagePath": "staticwebassets\\HomeWebApp.styles.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\User\\source\\repos\\TaskWebApp\\HomeWebApp\\wwwroot\\sample-data\\weather.json",
+      "PackagePath": "staticwebassets\\sample-data\\weather.json"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.HomeWebApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.HomeWebApp.props",
+      "PackagePath": "build\\HomeWebApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.HomeWebApp.props",
+      "PackagePath": "buildMultiTargeting\\HomeWebApp.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.HomeWebApp.props",
+      "PackagePath": "buildTransitive\\HomeWebApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

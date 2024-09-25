@@ -1,0 +1,65 @@
+﻿@page "/Users/Login"
+@using HomeWebApp.Models
+@using System.Text.Json.Nodes
+
+<h1>Login</h1>
+<div class="row">
+    <div class="col-lg-8">
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label">Email:</label>
+            <div class="col-md-8">
+                <input class="form-control" @bind="LoginData.Email" />
+                <span class="text-danger">@Errors["Email"]?[0]</span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label">IC Number:</label>
+            <div class="col-md-8">
+                <input class="form-control" @bind="LoginData.ICNumber" />
+                <span class="text-danger">@Errors["ICNumber"]?[0]</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-md-4 col-md-4 d-grid">
+                <button class="btn btn-primary" @onclick="LoginUser">Login</button>
+            </div>
+            <div class="col-md-4 d-grid">
+                <a class="btn btn-outline-primary" href="/">Cancel</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@inject HttpClient http
+@inject NavigationManager navManager
+
+@code {
+    public Users LoginData { set; get; } = new();
+    public JsonNode Errors { set; get; } = new JsonObject();
+
+    protected async Task LoginUser()
+    {
+        var response = await http.PostAsJsonAsync("https://localhost:4000/api/tasks", LoginData);
+        if (response.IsSuccessStatusCode)
+        {
+            var userId = await response.Content.ReadFromJsonAsync<int>();
+            // Redirect to the profile page based on user ID
+            navManager.NavigateTo($"/Users/Profile/{userId}");
+        }
+        else
+        {
+            var strResponse = await response.Content.ReadAsStringAsync();
+            Console.WriteLine("Json Response: \n" + strResponse);
+
+            try
+            {
+                var jsonResponse = JsonNode.Parse(strResponse);
+                Errors = jsonResponse?["errors"] ?? new JsonObject();
+            }
+            catch (Exception ex)
+            {
+                // Handle parsing error
+            }
+        }
+    }
+}

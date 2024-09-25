@@ -1,0 +1,22 @@
+﻿@page "/Tasks/DeleteTask/{Id:int}"
+@using HomeWebApp.Models
+
+<h1 class="mb-3">Delete Task</h1>
+<p>Are you sure you want to delete the task ID : @Id?</p>
+<button class="btn btn-danger" @onclick="DeleteTaskById">Delete</button>
+<a class="btn btn-secondary" href="/Tasks">Cancel</a>
+
+@inject HttpClient http
+@inject NavigationManager navManager
+
+@code {
+    [Parameter]
+    public int Id { set; get; }
+
+    protected async Task DeleteTaskById()
+    {
+        var response = await http.DeleteAsync("https://localhost:4000/api/tasks/" + Id);
+        // Redirect to list of tasks
+        navManager.NavigateTo("/Tasks");
+    }
+}

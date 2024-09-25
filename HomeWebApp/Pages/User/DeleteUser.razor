@@ -1,0 +1,21 @@
+﻿@page "/Users/DeleteUser/{Id:int}"
+
+<h1 class="mb-3">Delete User</h1>
+<p>Are you sure you want to delete user ID : @Id?</p>
+<button class="btn btn-danger" @onclick="DeleteUserById">Delete</button>
+<a class="btn btn-secondary" href="/Users">Cancel</a>
+
+@inject HttpClient http
+@inject NavigationManager navManager
+
+@code {
+    [Parameter]
+    public int Id { set; get; }
+
+    protected async Task DeleteUserById()
+    {
+        var response = await http.DeleteAsync("https://localhost:4000/api/user/" + Id);
+        // Redirect to list of users
+        navManager.NavigateTo("/Users");
+    }
+}

@@ -1,0 +1,143 @@
+﻿@page "/Tasks/CreateTask"
+@using HomeWebApp.Models
+@using System.Text.Json.Nodes
+
+<h1>Welcome to the Create Task for Recording Management Page</h1>
+<div class="row">
+    <div class="col-lg-8">
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label"> Task Name : </label>
+            <div class="col-md-8">
+                <input class="form-control" @bind="TaskData.TaskName" />
+                <span class=" text-danger">@Errors["TaskName"]?[0]</span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label"> Task Description : </label>
+            <div class="col-md-8">
+                <input class="form-control" @bind="TaskData.TaskDescription" />
+                <span class=" text-danger">@Errors["TaskDescription"]?[0]</span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label"> Customer Name : </label>
+            <div class="col-md-8">
+                <input class="form-control" @bind="TaskData.CustomerName" />
+                <span class=" text-danger">@Errors["CustomerName"]?[0]</span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label"> Man Days : </label>
+            <div class="col-md-8">
+                <input class="form-control" @bind="TaskData.ManDays" />
+                <span class=" text-danger">@Errors["ManDays"]?[0]</span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label"> Start Date : </label>
+            <div class="col-md-8">
+                <input type="datetime-local" class="form-control" @bind="TaskData.StartDate" />
+                <span class=" text-danger">@Errors["StartDate"]?[0]</span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label"> Add Days : </label>
+            <div class="col-md-8">
+                <input class="form-control" @bind="TaskData.AddDays" />
+                <span class=" text-danger">@Errors["AddDays"]?[0]</span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label"> Expect date : </label>
+            <div class="col-md-8">
+                <input type="datetime-local" class="form-control" @bind="TaskData.Expectdate" />
+                <span class=" text-danger">@Errors["Expectdate"]?[0]</span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label"> Person-In-Charge Email : </label>
+            <div class="col-md-8">
+                <input class="form-control" @bind="TaskData.PICEmail" />
+                <span class=" text-danger">@Errors["PICEmail"]?[0]</span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label"> Status : </label>
+            <div class="col-md-8">
+               <select class="form-select"@bind="TaskData.Status">
+                   <option value ='Assigned'>Assigned</option>
+                    <option value='Ongoing'>Ongoing</option>
+                    <option value='Pending'>Pending</option>
+                    <option value='Completed'>Completed</option>
+               </select>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label"> Estimated Completion Date : </label>
+            <div class="col-md-8">
+                <input type="datetime-local" class="form-control" @bind="TaskData.CompletionDate" />
+                <span class=" text-danger">@Errors["CompletionDate"]?[0]</span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label"> Remarks : </label>
+            <div class="col-md-8">
+                <input class="form-control" @bind="TaskData.Remarks" />
+                <span class=" text-danger">@Errors["Remarks"]?[0]</span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label"> Last Date Communicated : </label>
+            <div class="col-md-8">
+                <input type="datetime-local" class="form-control" @bind="TaskData.LastDateComs" />
+                <span class=" text-danger">@Errors["LastDateComs"]?[0]</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-md-4 col-md-4 d-grid">
+                <button class="btn btn-primary" @onclick="SaveUser">Submit</button>
+            </div>
+            <div class="col-md-4 d-grid">
+                <a class="btn btn-outline-primary" href="/Tasks">Cancel</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+@inject HttpClient http
+@inject NavigationManager navManager
+
+
+@code 
+{
+    public TasksModel TaskData {set; get; } = new();
+    public JsonNode Errors {set; get; } = new JsonObject();
+
+    protected async Task SaveUser()
+    {
+        var response = await http.PostAsJsonAsync("https://localhost:4000/api/Tasks", TaskData);
+        if (response.IsSuccessStatusCode)
+        {
+            //redirect to list of client
+            navManager.NavigateTo("/Tasks");
+        }
+        else
+        {
+            var strResponse = await response.Content.ReadAsStringAsync();
+            Console.WriteLine("Json Response: \n" + strResponse);
+
+            try
+            {
+                var jsonResponse = JsonNode.Parse(strResponse);
+                Errors = jsonResponse?["errors"] ?? new JsonObject();
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+        }
+    }
+
+
+}

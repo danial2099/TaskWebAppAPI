@@ -1,0 +1,140 @@
+﻿@page "/Users"
+@using HomeWebApp.Models
+
+<h1 class ="text-center mb-3">List Of Users</h1>
+<a class="btn btn alert-primary mb-3" href="/Users/CreateUser">Want to create new user?</a>
+
+@if (users == null)
+{
+    <p><em>Loading...</em></p>
+
+}
+else
+{
+
+    <style>
+        .userTable {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+
+            .userTable thead tr {
+                background-color: #009879;
+                color: #ffffff;
+                text-align: left;
+                font-weight: bold;
+            }
+
+            .userTable th, .userTable td {
+                padding: 12px 15px;
+                border: 1px solid #dddddd;
+            }
+
+            .userTable tbody tr {
+                border-bottom: 1px solid #dddddd;
+            }
+
+                .userTable tbody tr:nth-of-type(even) {
+                    background-color: #f3f3f3;
+                }
+
+                .userTable tbody tr:last-of-type {
+                    border-bottom: 2px solid #009879;
+                }
+
+                .userTable tbody tr:hover {
+                    background-color: #f1f1f1;
+                }
+
+        .btn {
+            padding: 5px 10px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 5px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            color: white;
+        }
+    </style>
+
+    <table class="userTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone Number</th>
+                <th>IC Number</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in users)
+            {
+                <tr>
+                    <td>@user.Id</td>
+                    <td>@user.Name</td>
+                    <td>@user.Email</td>
+                    <td>@user.PhoneNumber</td>
+                    <td>@user.ICNumber</td>
+                    <td style="white-space:nowrap">
+                        <a class="btn btn-primary" href="/Users/EditUser/@user.Id">Edit</a>
+                        <a class="btn btn-danger" href="/Users/DeleteUser/@user.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+   @* <table class="userTable">
+       <thead>
+           <tr>
+               <th> ID </th><th></th>
+               <th> Name </th><th></th>
+               <th> Email </th><th></th>
+               <th> Phone Number </th><th></th>
+               <th> IC Number </th>
+           </tr>
+       </thead>
+       <tbody>
+            @foreach (var user in users)
+            {
+                <tr>
+                    <td>@user.Id</td><td>
+                    </td>
+                    <td>@user.Name</td>
+                    <td></td>
+                    <td>@user.Email</td>
+                    <td></td>
+                    <td>@user.PhoneNumber</td>
+                    <td></td>
+                    <td>@user.ICNumber</td>
+                    <td></td>
+                    <td style="white-space:nowrap">
+                        <a class="btn btn-primary btn-sm" href="/Users/Edit/@user.Id">Edit</a>
+                        <a class="btn btn-danger btn-sm" href="/Users/Delete/@user.Id">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+   </table> *@
+}
+
+@inject HttpClient Http
+@code {
+    private List<Models.Users>? users;
+
+    protected override async Task OnInitializedAsync()
+    {
+        users = await Http.GetFromJsonAsync<List<Models.Users>>("https://localhost:4000/api/user");
+
+    }
+}

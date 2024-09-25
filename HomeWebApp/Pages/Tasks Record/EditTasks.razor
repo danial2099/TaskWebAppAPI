@@ -1,0 +1,180 @@
+﻿@page "/Tasks/EditTasks/{Id:int}"
+@using HomeWebApp.Models
+@using System.Text.Json.Nodes
+<h3>Edit Task for ID @Id?</h3>
+
+
+<div class=" row">
+    <div class="col-lg-8">
+ @if (tasks ==null)
+        {
+            <p><em>Loading...</em></p>
+        }
+ else
+{
+
+<div class="row">
+    <div class="col-lg-8">
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label"> Task Name : </label>
+            <div class="col-md-8">
+                <input class="form-control" @bind="taskdata.TaskName" />
+                <span class=" text-danger">@Errors["TaskName"]?[0]</span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label"> Task Description : </label>
+            <div class="col-md-8">
+                <input class="form-control" @bind="taskdata.TaskDescription" />
+                <span class=" text-danger">@Errors["TaskDescription"]?[0]</span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label"> Customer Name : </label>
+            <div class="col-md-8">
+                <input class="form-control" @bind="taskdata.CustomerName" />
+                <span class=" text-danger">@Errors["CustomerName"]?[0]</span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label"> Man Days : </label>
+            <div class="col-md-8">
+                <input class="form-control" @bind="taskdata.ManDays" />
+                <span class=" text-danger">@Errors["ManDays"]?[0]</span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label"> Start Date : </label>
+            <div class="col-md-8">
+                <input type="datetime-local" class="form-control" @bind="taskdata.StartDate" />
+                <span class=" text-danger">@Errors["StartDate"]?[0]</span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label"> Add Days : </label>
+            <div class="col-md-8">
+                <input class="form-control" @bind="taskdata.AddDays" />
+                <span class=" text-danger">@Errors["AddDays"]?[0]</span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label"> Expect date : </label>
+            <div class="col-md-8">
+                <input type="datetime-local" class="form-control" @bind="taskdata.Expectdate" />
+                <span class=" text-danger">@Errors["Expectdate"]?[0]</span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label"> Person-In-Charge Email : </label>
+            <div class="col-md-8">
+                <input class="form-control" @bind="taskdata.PICEmail" />
+                <span class=" text-danger">@Errors["PICEmail"]?[0]</span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label"> Status : </label>
+            <div class="col-md-8">
+                <select class="form-select" @bind="taskdata.Status">
+                    <option value='Assigned'>Assigned</option>
+                    <option value='Ongoing'>Ongoing</option>
+                    <option value='Pending'>Pending</option>
+                    <option value='Completed'>Completed</option>
+                </select>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label"> Estimated Completion Date : </label>
+            <div class="col-md-8">
+                <input type="datetime-local" class="form-control" @bind="taskdata.CompletionDate" />
+                <span class=" text-danger">@Errors["CompletionDate"]?[0]</span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label"> Remarks : </label>
+            <div class="col-md-8">
+                <input class="form-control" @bind="taskdata.Remarks" />
+                <span class=" text-danger">@Errors["Remarks"]?[0]</span>
+            </div>
+        </div>
+        <div class="row mb-3">
+            <label class="col-md-4 col-form-label"> Last Date Communicated : </label>
+            <div class="col-md-8">
+                <input type="datetime-local" class="form-control" @bind="taskdata.LastDateComs" />
+                <span class=" text-danger">@Errors["LastDateComs"]?[0]</span>
+            </div>
+        </div>
+        <div class="row">
+            <div class="offset-md-4 col-md-4 d-grid">
+                <button class="btn btn-primary" @onclick="SaveUser">Submit</button>
+            </div>
+            <div class="col-md-4 d-grid">
+                <a class="btn btn-outline-primary" href="/Tasks">Cancel</a>
+            </div>
+        </div>
+    </div>
+</div>
+}
+</div>
+</div>
+@inject HttpClient http
+@inject NavigationManager navManager
+
+@code {
+    [Parameter]
+    public int Id { set; get; }
+    public TasksModel? tasks= null;
+    public Models.TasksModel taskdata { set; get; } = new();
+    public JsonNode Errors { set; get; } = new JsonObject();
+
+
+    protected override async Task OnParametersSetAsync()
+    {
+        try
+        {
+            tasks = await http.GetFromJsonAsync<TasksModel>("https://localhost:4000/api/Tasks/" + Id);
+            taskdata.TaskName = tasks?.TaskName ?? "";
+            taskdata.TaskDescription = tasks?.TaskDescription ?? "";
+            taskdata.CustomerName = tasks?.CustomerName ?? "";
+            taskdata.ManDays = tasks?.ManDays ?? 0;
+            taskdata.StartDate = tasks?.StartDate ?? DateTime.MinValue; // Provide a default DateTime
+            taskdata.AddDays = tasks?.AddDays ?? 0;
+            taskdata.Expectdate = tasks?.Expectdate ?? DateTime.MinValue; // Provide a default DateTime
+            taskdata.PICEmail = tasks?.PICEmail ?? "";
+            taskdata.Status = tasks?.Status ?? "";
+            taskdata.CompletionDate = tasks?.CompletionDate ?? DateTime.MinValue; // Provide a default DateTime
+            taskdata.Remarks = tasks?.Remarks ?? "";
+            taskdata.LastDateComs = tasks?.LastDateComs ?? DateTime.MinValue; // Provide a default DateTime
+            
+
+        }
+
+        catch (Exception ex)
+        {
+            Console.WriteLine("Exception : " + ex.Message);
+        }
+    }
+    protected async Task SaveUser()
+    {
+        var response = await http.PutAsJsonAsync("https://localhost:4000/api/Tasks/" + Id, taskdata);
+        if (response.IsSuccessStatusCode)
+        {
+            //redirect to list of client
+            navManager.NavigateTo("/Tasks");
+        }
+        else
+        {
+            var strResponse = await response.Content.ReadAsStringAsync();
+
+            try
+            {
+                var jsonResponse = JsonNode.Parse(strResponse);
+                Errors = jsonResponse?["errors"] ?? new JsonObject();
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+        }
+    }
+}
